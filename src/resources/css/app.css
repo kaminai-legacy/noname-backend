@@ -1,7 +1,0 @@
-/* reset styles */
-@import 'normalize.css/normalize.css';
-
-/* apply tailwind */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

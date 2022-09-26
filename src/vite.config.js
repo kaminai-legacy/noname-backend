@@ -1,13 +1,20 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
-import vue from '@vitejs/plugin-vue';
+import commonjs from 'rollup-plugin-commonjs';
 
 export default defineConfig({
+    envDir: './resources/js',
     plugins: [
-        vue(),
         laravel({
-            input: ['resources/css/app.css', 'resources/scss/app.scss', 'resources/js/app.js'],
+            input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
         }),
     ],
+    build: {
+        rollupOptions: {
+            plugins: [
+                commonjs(),
+            ]
+        },
+    },
 });
