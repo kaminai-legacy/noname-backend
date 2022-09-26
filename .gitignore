@@ -30,3 +30,12 @@ Homestead.json
 
 # Mac OS
 .DS_Store
+
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env.backup
+auth.json
